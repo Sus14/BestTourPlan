@@ -11,7 +11,7 @@
     &__text
       margin-top: 4px
       margin-bottom: 0
-    &__desscription
+    &__description
       margin: 0
   &-name
     font-size: 24px
@@ -20,9 +20,20 @@
     display: flex
     flex-wrap: wrap
     align-items: center
-  &-desscription
+  &-description
     font-size: 12px
     ine-height: 15px
+  &-grid
+    display: flex
+    justify-content: space-between
+  &-right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__slide-img
+    object-fit: cover
+    height: 100%
+    width: 100%
 .stars
   flex-basis: 100%
 .offer
@@ -59,9 +70,8 @@
     bottom: 0
     left: 0
     right: 0
-    background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
     z-index: 10
-    border: none
+    background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
 .slider
   width: 728px
   &-button
@@ -84,5 +94,86 @@
     &--prev
       left: 18px
       background-image: url(../img/arrow-prev.svg)
+.booking
+  background-color: $dark
+  color: $light
+  border-radius: 8px
+  width: 350px
+  min-height: 210px
+  padding: 28px
+  &__info
+    display: flex
+    justify-content: space-between
+    font-family: Nunito
+    margin-bottom: 9px
+  &__price
+    display: flex
+    flex-direction: column
+  &__start
+    font-weight: normal
+    font-size: 10px
+    line-height: 14px
+  &__pricetag
+    font-style: normal
+    font-weight: 800
+    font-size: 24px
+    line-height: 33px
+  &__per-room
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 16px
+  &__room
+    margin-top: 4px
+  &__text
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 8px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 16px
+  &__description
+    margin-left: 9px
+  &__call-center
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 17px
+  &__heading
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+  &__number
+    display: flex
+    align-items: center
+    justify-content: space-between
+    text-decoration: none
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    color: inherit
+  &__num
+    margin-left: 8px
+  &__button
+    width: 100%
+    min-height: 45px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    background-color: $primary
+    border: none
+    color: inherit
+    cursor: pointer
+.map
+  width: 347px
+  height: 213px
+  background-color: #000000
+  border-radius: 10px
+
 
 
