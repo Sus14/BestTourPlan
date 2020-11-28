@@ -1023,6 +1023,12 @@ img {
   .slider {
     height: 250px;
   }
+  .slider-button {
+    width: 15px;
+    height: 15px;
+    -webkit-background-size: 7px 7px;
+            background-size: 7px;
+  }
   .hotel__slider {
     margin-bottom: 20px;
   }
