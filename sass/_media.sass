@@ -4,7 +4,8 @@
   .slider
     width: 590px
 @media (max-width: 992px)
-  .container
+  .container,
+  .newsletter-wrapper
     max-width: 700px
   .logo
     width: 132px
@@ -37,9 +38,9 @@
   .slider
     width: 100%
 @media (max-width: 766px)
-  .container
+  .container,
+    max-width: 576px
     max-width: 92%
-    width: 576px
   .navbar
     &__search, &-menu, &__user
       display: none
@@ -87,6 +88,12 @@
     width: 100%
   .map
     width: 100%
+  .newsletter
+    &-wrapper
+      ax-width: 576px
+      max-width: 92%
+      flex-direction: column
+      align-items: flex-start
 @media (max-width: 576px)
   .navbar
     &-top
@@ -104,6 +111,13 @@
   .hotel
     &__slider
       margin-bottom: 20px
+  .newsletter
+    padding: 76px 0 83px 0
+    &__titel
+      margin-bottom: 37px
+  .subscribe
+    width: 100%
+
 
 
 
