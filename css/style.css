@@ -1026,8 +1026,8 @@ img {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-background-size: 15px 15px;
-          background-size: 15px;
+  -webkit-background-size: 8px 8px;
+          background-size: 8px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -1409,6 +1409,10 @@ img {
   }
   .reviews-slider__button {
     top: 32px;
+    width: 7px;
+    height: 20px;
+    -webkit-background-size: 8px 8px;
+            background-size: 8px;
   }
   .reviews-slider__button--prev {
     left: 50%;
