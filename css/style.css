@@ -858,7 +858,7 @@ img {
 .newsletter {
   position: relative;
   background-image: url(../img/newsletter-bg.jpg);
-  padding: 98px 0 87px 0;
+  padding: 108px 0 97px 0;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -912,7 +912,9 @@ img {
   line-height: 30px;
 }
 
-.newsletter__strong {
+.newsletter-title__strong {
+  font-style: normal;
+  font-weight: 600;
   font-size: 36px;
   line-height: 45px;
   text-transform: uppercase;
@@ -938,10 +940,15 @@ img {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+  color: #BDBDBD;
 }
 
 .subscribe__button {
   position: absolute;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
   right: 0;
   top: 0;
   min-width: 65px;
@@ -963,10 +970,6 @@ img {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 70px;
-}
-
-.reviews-slider {
-  margin-bottom: 9px;
 }
 
 .reviews-slider__item {
@@ -1067,6 +1070,7 @@ img {
           border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 9px;
 }
 
 .reviews-slider__username {
@@ -1086,7 +1090,7 @@ img {
   margin-bottom: 4px;
 }
 
-.reviews-slider__raiteng {
+.reviews-slider__rating {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1095,6 +1099,14 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews-slider__rating-star {
+  margin-right: 3px;
 }
 
 .reviews-slider__text {
@@ -1173,7 +1185,7 @@ img {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 768px) {
   .container {
     max-width: 576px;
     max-width: 92%;
@@ -1260,6 +1272,9 @@ img {
   .map {
     width: 100%;
   }
+  .newsletter {
+    padding: 103px 0 103px 0;
+  }
   .newsletter-wrapper {
     ax-width: 576px;
     max-width: 92%;
@@ -1327,6 +1342,17 @@ img {
   .subscribe {
     width: 100%;
   }
+  .subscribe__input {
+    padding-left: 20px;
+  }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 @media (max-width: 320px) {
@@ -1359,6 +1385,14 @@ img {
   }
   .booking__button {
     font-weight: 400;
+  }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 /*# sourceMappingURL=style.css.map */
