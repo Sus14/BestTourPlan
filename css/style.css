@@ -1407,6 +1407,9 @@ img {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .newsletter__title {
+    margin-bottom: 5px;
+  }
   .reviews-slider__item {
     padding: 0 30px 30px;
   }
@@ -1546,16 +1549,16 @@ img {
   .booking__button {
     font-weight: 400;
   }
-  .reviews-slider__text {
-    text-align: left;
-  }
-  .reviews-slider__title {
+  .reviews__title {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
     text-align: center;
     text-transform: uppercase;
+  }
+  .reviews-slider__text {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */
