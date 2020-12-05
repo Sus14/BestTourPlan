@@ -7,6 +7,15 @@
   .card
     width: 230px
     height: 250px
+  .footer
+    &-wrapper
+      grid-template-columns: 200px repeat(2, 1fr) 220px
+      grid-column-gap: 0
+    &__input
+      flex-basis: 100%
+    &__categories
+      justify-self: center
+
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
@@ -54,6 +63,36 @@
       width: 340px
       height: 255px
       // чтобы заработал адаптив для этого размера нужно не только в медиа запросе прописать все указанное выше но также зайти в _activities/card/img и уже в img поменять выстовить высоту и ширину 100%
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(2, 105px) repeat(2, 1fr) repeat(2, 105px)
+      grid-row-gap: 40px
+      grid-column-gap: 0
+    &__input
+      flex-basis: 49%
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+      justify-self: start
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+      &-form
+        grid-column: span 5
+        grid-row: 4
 @media (max-width: 766px)
   .container,
     max-width: 576px
@@ -141,6 +180,9 @@
   .card
     width: 49%
     height: 255px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 576px)
   .container,
     max-width: 89%
@@ -188,6 +230,53 @@
         text-transform: uppercase
   .card
     width: 100%
+  .footer
+    &__ul
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 160%
+    &__item
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 160%
+    &__input
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__message
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1
+      justify-self: start
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
 @media (max-width: 320px)
   .container,
     width: 280px
