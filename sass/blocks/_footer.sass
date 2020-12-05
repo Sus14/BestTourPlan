@@ -52,6 +52,13 @@
     line-height: 23px
     margin: 0 0 16px 0
     text-transform: uppercase
+  &__headline
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    margin: 0 0 16px 0
+    text-transform: uppercase
     &--inline
       margin: 0 43px 0 0
     &--mb-3
@@ -113,15 +120,16 @@
     line-height: 15px
     color: $footer-text-color
   &-end
-    display: flex
-    justify-content: space-between
-    grid-column: 2 / 5
+    justify-self: center
+    grid-column: 2 / 4
     font-style: normal
     font-weight: normal
     font-size: 12px
     line-height: 15px
-    padding-top: 35px
+    padding-top: 66px
+    &__link
+      padding-right: 10px
   &__photo
-    display: flex
-    padding-left: 120px
-    padding-top: 35px
+    justify-self: end
+    align-self: end
+    grid-column: 4 / 5

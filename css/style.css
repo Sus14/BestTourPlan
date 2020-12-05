@@ -525,8 +525,8 @@ img {
 }
 
 .hotel {
-  padding-top: 19px;
-  padding-bottom: 70px;
+  padding-top: 37px;
+  padding-bottom: 73px;
 }
 
 .hotel-info {
@@ -542,7 +542,6 @@ img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 7px;
 }
 
 .hotel-info__offer {
@@ -670,10 +669,22 @@ img {
   background-image: url(../img/arrow-prev.svg);
 }
 
-.stars {
+.hotel-stars {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hotel-stars__star {
+  margin-right: 2px;
 }
 
 .offer {
@@ -863,7 +874,7 @@ img {
 .newsletter {
   position: relative;
   background-image: url(../img/newsletter-bg.jpg);
-  padding: 108px 0 97px 0;
+  padding: 108px 0 77px 0;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -1077,7 +1088,6 @@ img {
           border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 9px;
 }
 
 .reviews-slider__username {
@@ -1342,11 +1352,20 @@ img {
   text-transform: uppercase;
 }
 
-.footer__title--inline {
+.footer__headline {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+}
+
+.footer__headline--inline {
   margin: 0 43px 0 0;
 }
 
-.footer__title--mb-3 {
+.footer__headline--mb-3 {
   margin-bottom: 30px;
 }
 
@@ -1443,31 +1462,32 @@ img {
 }
 
 .footer-end {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2 / 5;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  padding-top: 35px;
+  padding-top: 66px;
+}
+
+.footer-end__link {
+  padding-right: 10px;
 }
 
 .footer__photo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 120px;
-  padding-top: 35px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+              -ms-grid-row-align: end;
+          align-self: end;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
 }
 
 @media (max-width: 1200px) {
@@ -1614,6 +1634,19 @@ img {
     grid-column: span 5;
     -ms-grid-row: 4;
     grid-row: 4;
+  }
+  .footer-end {
+    padding-top: 33px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .footer__photo {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 1;
+    grid-column: 6 / 7;
   }
 }
 
@@ -1763,6 +1796,17 @@ img {
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
   }
+  .footer-end {
+    padding-top: 33px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+  }
+  .footer__photo {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 1;
+    grid-column: 6 / 7;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1827,6 +1871,9 @@ img {
   .card {
     width: 100%;
   }
+  .footer__title {
+    margin-top: 30px;
+  }
   .footer__ul {
     font-style: normal;
     font-weight: normal;
@@ -1854,6 +1901,7 @@ img {
   .footer-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    grid-gap: 0;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1866,6 +1914,7 @@ img {
     grid-row: 2;
     -ms-grid-column: 1;
     grid-column: 1;
+    margin-top: 30px;
   }
   .footer__additional {
     -ms-grid-row: 3;
@@ -1898,6 +1947,23 @@ img {
     grid-row: 7;
     -ms-grid-column: 1;
     grid-column: 1;
+  }
+  .footer-end {
+    -ms-grid-row: 8;
+    grid-row: 8;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    padding-top: 30px;
+  }
+  .footer__photo {
+    -ms-grid-row: 9;
+    grid-row: 9;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-column-align: start;
+        justify-self: start;
   }
 }
 
