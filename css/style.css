@@ -382,7 +382,7 @@ img {
   padding-bottom: 40px;
 }
 
-.navbar-top__menu-button {
+.navbar-menu {
   display: none;
 }
 
@@ -420,6 +420,10 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+}
+
+.navbar-menu__item--mobile--visible {
+  display: none;
 }
 
 .navbar .menu-button {
@@ -490,6 +494,10 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.navbar__user--mobile--visible, .navbar__search--mobile--visible {
+  display: none;
 }
 
 .breadcrumb-list {
@@ -1436,6 +1444,7 @@ img {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
   margin-bottom: 23px;
+  height: 123px;
 }
 
 .footer__button {
@@ -1655,8 +1664,60 @@ img {
     max-width: 576px;
     max-width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  body {
+    padding-top: 78px;
+  }
+  .navbar__mobile--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+  }
+  .navbar__user--mobile--hidden, .navbar__search--mobile--hidden {
     display: none;
+  }
+  .navbar__user--mobile--visible, .navbar__search--mobile--visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 78px;
+    pedding-top: 31px;
+  }
+  .navbar-bottom--visible {
+    display: block;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 35px;
+  }
+  .navbar-menu__item--mobile--visible {
+    display: block;
   }
   .navbar-top__menu-button {
     display: -webkit-box;
@@ -1686,6 +1747,11 @@ img {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .user__name--light {
+    color: #ffffff;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .stars {
     -webkit-flex-basis: auto;
@@ -1790,6 +1856,10 @@ img {
   .card {
     width: 49%;
     height: 255px;
+  }
+  .footer-wrapper {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
   }
   .footer__input {
     -webkit-flex-basis: 100%;

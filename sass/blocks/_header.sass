@@ -6,8 +6,8 @@
     justify-content: space-between
     padding-top: 40px
     padding-bottom: 40px
-    &__menu-button
-      display: none
+  &-menu
+    display: none
   &__search
     margin: auto
     margin-left: 108px
@@ -27,6 +27,10 @@
       text-transform: uppercase
       font-size: 14px
       line-height: 18px
+    &__item
+      &--mobile
+        &--visible
+          display: none
   .menu
     &-button
       padding: 0
@@ -71,3 +75,8 @@
     font-size: 14px
     line-height: 18px
     color: $text-color
+.navbar
+  &__user, &__search
+    &--mobile
+      &--visible
+        display: none
