@@ -15,9 +15,6 @@
       flex-basis: 100%
     &__categories
       justify-self: center
-    &-end
-      &__link
-        margin-right: 10px
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
@@ -67,14 +64,14 @@
       // чтобы заработал адаптив для этого размера нужно не только в медиа запросе прописать все указанное выше но также зайти в _activities/card/img и уже в img поменять выстовить высоту и ширину 100%
   .footer
     &-wrapper
-      grid-template-columns: repeat(4, 1fr)
+      grid-template-columns: 250px 1fr 250px
       grid-row-gap: 30px
       grid-column-gap: 0
     &__input
       flex-basis: 49%
     &__logo
       grid-row: 1 / 2
-      grid-column: span 1
+      grid-column: span 2
     &__social
       &-network
         grid-row: 1 / 2
@@ -85,28 +82,22 @@
       grid-column: span 1
       justify-self: start
     &__legal
-      grid-row: 2 / 3
-      grid-column: 4 / 5
+      grid-column: span 1
     &__additional
-      grid-row: 2 / 3
       grid-column: span 2
-
     &__contact
       &-details
         grid-column: span 4
         grid-row: 3
       &-form
-        grid-column: span 3
+        grid-column: span 4
         grid-row: 4
     &-end
       padding-top: 33px
       grid-column: 1 / 4
       justify-self: start
-      &__link
-        margin-right: 10px
     &__photo
-      justify-self: end
-      grid-column: 4 / 7
+      grid-column: 3 / 4
 @media (max-width: 766px)
   .container,
     max-width: 576px
@@ -236,36 +227,17 @@
     width: 49%
     height: 255px
   .footer
-    padding: 73
     &-wrapper
-      grid-template-columns: repeat(4, 1fr )
+      grid-template-columns: repeat(1, 105px) repeat(2, 1fr) repeat(1, 105px)
+      grid-row-gap: 30px
+      grid-column-gap: 0
     &__input
       flex-basis: 100%
-    &__logo
-      width: 120px
-      grid-row: 1 / 2
-      grid-column: span 1
-    &__social
-      &-network
-        grid-row: 1 / 2
-        grid-column: span 3
-    &__categories
-      grid-row: 2 / 3
-      grid-column: span 1
-      justify-self: start
-    &__additional
-      justify-self: center
-      grid-row: 2 / 3
-      grid-column: span 2
-    &__legal
-      grid-row: 2 / 3
-      grid-column: span 1
-      justify-self: end
     &-end
       padding-top: 33px
-      grid-column: 1 / 3
+      grid-column: 1 / 4
     &__photo
-      grid-column: 3 / 3
+      grid-column: 3 / 4
 @media (max-width: 576px)
   .container,
     max-width: 89%
@@ -348,7 +320,6 @@
         grid-column: 1
         margin-top: 30px
     &__additional
-      justify-self: start
       grid-row: 3
       grid-column: 1
     &__categories
