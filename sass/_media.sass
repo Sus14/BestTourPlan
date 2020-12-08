@@ -9,7 +9,7 @@
     height: 250px
   .footer
     &-wrapper
-      // grid-template-columns: 200px repeat(2, 1fr) 220px
+      grid-template-columns: repeat(4, 1fr)
       grid-column-gap: 0
     &__input
       flex-basis: 100%
@@ -67,14 +67,14 @@
       // чтобы заработал адаптив для этого размера нужно не только в медиа запросе прописать все указанное выше но также зайти в _activities/card/img и уже в img поменять выстовить высоту и ширину 100%
   .footer
     &-wrapper
-      grid-template-columns: repeat(4, 1fr)
+      grid-template-columns: repeat(7, 1fr)
       grid-row-gap: 30px
       grid-column-gap: 0
     &__input
       flex-basis: 49%
     &__logo
       grid-row: 1 / 2
-      grid-column: span 1
+      grid-column: span 2
     &__social
       &-network
         grid-row: 1 / 2
@@ -82,37 +82,38 @@
         align-self: center
     &__categories
       grid-row: 2 / 3
-      grid-column: span 1
+      grid-column: span 2
       justify-self: start
     &__legal
       grid-row: 2 / 3
-      grid-column: 4 / 5
+      grid-column: span 2
     &__additional
       grid-row: 2 / 3
-      grid-column: span 2
-
+      grid-column: span 3
     &__contact
       &-details
-        grid-column: span 4
         grid-row: 3
+        grid-column: span 4
       &-form
-        grid-column: span 3
+        grid-column: span 5
         grid-row: 4
     &-end
       padding-top: 33px
-      grid-column: 1 / 4
+      grid-row: 5
+      grid-column: span 4
       justify-self: start
       &__link
         margin-right: 10px
     &__photo
+      grid-row: 5
+      grid-column: span 7
       justify-self: end
-      grid-column: 4 / 7
 @media (max-width: 766px)
   .container,
     max-width: 576px
     max-width: 92%
   body
-    padding-top: 78px
+    padding-top: 81px
   .navbar
     &__mobile
       &--fixed
@@ -133,7 +134,7 @@
     &-bottom
       display: none
       position: fixed
-      bottom: 0
+      bottom: 500px
       right: 0
       left: 0
       top: 78px
@@ -141,9 +142,11 @@
       &--visible
         display: block
     &-menu
+      max-height: 250px
+      overflow: scroll
       flex-direction: column
       &__item
-        margin-bottom: 35px
+        margin-bottom: 20px
         &--mobile
           &--visible
             display: block
@@ -238,34 +241,41 @@
   .footer
     padding: 73
     &-wrapper
-      grid-template-columns: repeat(4, 1fr )
+      grid-template-columns: repeat(12, 1fr)
     &__input
       flex-basis: 100%
     &__logo
       width: 120px
       grid-row: 1 / 2
-      grid-column: span 1
+      grid-column: span 3
     &__social
       &-network
         grid-row: 1 / 2
-        grid-column: span 3
+        grid-column: span 8
     &__categories
       grid-row: 2 / 3
-      grid-column: span 1
+      grid-column: span 3
       justify-self: start
     &__additional
       justify-self: center
       grid-row: 2 / 3
-      grid-column: span 2
+      grid-column: span 5
     &__legal
       grid-row: 2 / 3
-      grid-column: span 1
+      grid-column: span 4
       justify-self: end
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 8
+      &-form
+        grid-row: 4
+        grid-column: span 8
     &-end
       padding-top: 33px
-      grid-column: 1 / 3
+      grid-column: span 6
     &__photo
-      grid-column: 3 / 3
+      grid-column: span 12
 @media (max-width: 576px)
   .container,
     max-width: 89%
