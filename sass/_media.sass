@@ -9,15 +9,14 @@
     height: 250px
   .footer
     &-wrapper
-      grid-template-columns: 200px 200px repeat(1, 1fr) 250px
-      grid-column-gap: 0
-    &__additional
-      grid-column: span 1
+      grid-template-columns: 230px 230px repeat(1, 1fr) 200px
+      grid-column-gap: 10px
     &__input
       flex-basis: 100%
-    &-end
-      &__link
-        margin-right: 10px
+    &__message
+      grid-column: span 3
+  .logo
+    width: 154px
 @media (max-width: 992px)
   .container,
   .newsletter-wrapper
@@ -276,7 +275,7 @@
       grid-column: span 4
     &__photo
       grid-column: span 1
-@media (max-width: 680px)
+@media (max-width: 700px)
   .footer
     &__title
       margin-top: 30px
@@ -288,13 +287,14 @@
       grid-column: 1
     &__social
       &-network
+        align-items: start
         flex-direction: column
         grid-row: 2
         grid-column: 1
         margin-top: 30px
       &-link
-        grid-row: 3
-        justify-content: flex-start
+        margin-top: 10px
+        justify-self: start
     &__additional
       justify-self: start
       grid-row: 4
@@ -406,6 +406,8 @@
       grid-column: 1
       justify-self: start
       padding-top: 30px
+      display: flex
+      justify-content: space-between
     &__photo
       grid-row: 9
       grid-column: 1
@@ -466,3 +468,6 @@
         &--visible
           max-width: 240px
           display: flex
+  .footer
+    &__link
+      margin-right: 9px
