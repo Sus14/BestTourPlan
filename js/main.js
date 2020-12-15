@@ -40,11 +40,10 @@ $(document).ready(function () {
   closeModalButton.on("click", closeModal)
 
   function openModal() {
-    var targetModal = $(this).attr("data-href");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
-    $(targetModal).find(".modal__overlay").addClass(".modal__overlay--visible");
-    $(targetModal).find(".modal__dialog").addClass(".modal__dialog--visible");
+    modalOverlay.addClass("modal__overlay--visible");
+    modalDialog.addClass("modal__dialog--visible");
   }
 
   function closeModal(event) {

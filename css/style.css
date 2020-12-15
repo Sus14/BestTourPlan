@@ -1522,8 +1522,7 @@ img {
 }
 
 .footer__phone {
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .modal__overlay {
@@ -1622,15 +1621,12 @@ img {
   .footer-wrapper {
     -ms-grid-columns: 230px 230px (1fr)[1] 200px;
         grid-template-columns: 230px 230px repeat(1, 1fr) 200px;
-    grid-column-gap: 10px;
+    grid-column-gap: 18px;
   }
   .footer__input {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-  }
-  .footer__message {
-    grid-column: span 3;
   }
   .logo {
     width: 154px;
@@ -2362,7 +2358,7 @@ img {
     padding-bottom: 21px;
   }
   .footer__link {
-    margin-right: 8px;
+    margin-right: 6px;
   }
   .footer__phone {
     margin: 0;
@@ -2371,8 +2367,11 @@ img {
     font-size: 14px;
     margin-bottom: 20px;
   }
+  .footer__title {
+    margin-top: 0;
+  }
   .footer__title--mb-3 {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .footer__text {
     margin-top: 0;
