@@ -273,6 +273,12 @@
       grid-column: span 4
     &__photo
       grid-column: span 1
+  .modal
+    &__dialog  
+      padding: 20px 50px 
+    &__input
+      &::placeholder 
+        text-overflow: ellipsis
 @media (max-width: 700px)
   .footer
     &-wrapper
@@ -495,4 +501,7 @@
       font-size: 12px
       line-height: 15px
       color: $footer-text-color
+  .modal
+    &__dialog  
+      padding: 20px 40px 
       

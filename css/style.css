@@ -1625,9 +1625,41 @@ img {
   margin-bottom: 15px;
 }
 
+.modal__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__input::placeholder {
+  color: #BDBDBD;
+}
+
 .modal__message {
   width: 100%;
   margin-bottom: 15px;
+}
+
+.modal__message::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__message:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__message::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.modal__message::placeholder {
+  color: #BDBDBD;
 }
 
 .modal__info {
@@ -2079,6 +2111,22 @@ img {
   .footer__photo {
     grid-column: span 1;
   }
+  .modal__dialog {
+    padding: 20px 50px;
+  }
+  .modal__input::-webkit-input-placeholder {
+    text-overflow: ellipsis;
+  }
+  .modal__input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+  .modal__input::-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+  .modal__input::placeholder {
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+  }
 }
 
 @media (max-width: 700px) {
@@ -2416,6 +2464,9 @@ img {
     font-size: 12px;
     line-height: 15px;
     color: #BDBDBD;
+  }
+  .modal__dialog {
+    padding: 20px 40px;
   }
 }
 
