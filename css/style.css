@@ -463,7 +463,7 @@ img {
   display: none;
 }
 
-.navbar .menu-button {
+.menu-button {
   padding: 0;
 }
 
@@ -1467,19 +1467,19 @@ img {
 }
 
 .footer__input::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__input:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__input::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__input::placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__message {
@@ -1494,19 +1494,19 @@ img {
 }
 
 .footer__message::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__message:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__message::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer__message::placeholder {
-  color: #BDBDBD;
+  color: #757575;
 }
 
 .footer-end {
@@ -1556,6 +1556,30 @@ img {
   margin: 0;
 }
 
+.modal-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__info {
+  width: 100%;
+}
+
+.modal__button {
+  max-width: 160px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -1580,7 +1604,8 @@ img {
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 478px;
+  width: 478px;
+  max-height: 90vh;
   padding: 33px 88px;
   background-color: #0A223D;
   -webkit-transform: translate(-50%, -50%);
@@ -1623,51 +1648,78 @@ img {
 .modal__input {
   width: 100%;
   margin-bottom: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .modal__input::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__input:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__input::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__input::placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .modal__message {
   width: 100%;
   margin-bottom: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .modal__message::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__message:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__message::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  text-overflow: ellipsis;
 }
 
 .modal__message::placeholder {
-  color: #BDBDBD;
+  color: #757575;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .modal__info {
+  width: 100%;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+  margin-bottom: 12px;
+}
+
+.modal__button {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 @media (max-width: 1200px) {
@@ -2115,15 +2167,19 @@ img {
     padding: 20px 50px;
   }
   .modal__input::-webkit-input-placeholder {
+    color: #757575;
     text-overflow: ellipsis;
   }
   .modal__input:-ms-input-placeholder {
+    color: #757575;
     text-overflow: ellipsis;
   }
   .modal__input::-ms-input-placeholder {
+    color: #757575;
     text-overflow: ellipsis;
   }
   .modal__input::placeholder {
+    color: #757575;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
   }
@@ -2216,6 +2272,20 @@ img {
     grid-column: 1;
     -ms-grid-column-align: start;
         justify-self: start;
+  }
+  .footer__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer__button {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -2371,6 +2441,10 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
+  .modal__dialog {
+    max-width: 89%;
+    overflow-y: scroll;
+  }
 }
 
 @media (max-width: 320px) {
@@ -2466,7 +2540,10 @@ img {
     color: #BDBDBD;
   }
   .modal__dialog {
-    padding: 20px 40px;
+    padding: 20px 20px;
+  }
+  .modal__button {
+    min-width: 140px;
   }
 }
 

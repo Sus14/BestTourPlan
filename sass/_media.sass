@@ -277,8 +277,9 @@
     &__dialog  
       padding: 20px 50px 
     &__input
-      &::placeholder 
-        text-overflow: ellipsis
+      &::placeholder
+        color: #757575
+        text-overflow: ellipsis   
 @media (max-width: 700px)
   .footer
     &-wrapper
@@ -328,6 +329,12 @@
       grid-row: 9
       grid-column: 1
       justify-self: start
+    &__info
+      display: flex
+      width: 100%
+      margin-bottom: 20px
+    &__button
+      order: 1
 @media (max-width: 578px)
   .container,
     max-width: 89%
@@ -427,6 +434,10 @@
         &--visible
           max-width: 250px
           display: flex
+  .modal
+    &__dialog
+      max-width: 89%
+      overflow-y: scroll
 @media (max-width: 320px)
   .container,
     width: 280px
@@ -503,5 +514,7 @@
       color: $footer-text-color
   .modal
     &__dialog  
-      padding: 20px 40px 
+      padding: 20px 20px 
+    &__button
+      min-width: 140px
       
