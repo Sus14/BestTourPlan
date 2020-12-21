@@ -12,7 +12,7 @@
       grid-template-columns: 230px 230px repeat(1, 1fr) 200px
       grid-column-gap: 18px
     &__input
-      flex-basis: 100%
+        flex-basis: 100%
   .logo
     width: 154px
 @media (max-width: 992px)
@@ -68,7 +68,8 @@
       grid-row-gap: 30px
       grid-column-gap: 0
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 48%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -240,7 +241,8 @@
     &-wrapper
       grid-template-columns: 190px repeat(3, 1fr) 190px 
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__logo
       width: 120px
       grid-row: 1 / 2

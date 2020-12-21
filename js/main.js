@@ -44,6 +44,11 @@ $(document).ready(function () {
     var modalDialog = $(".modal__dialog");
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
+    $('input').val('');
+    $('textarea').val('');
+    $("input").removeClass("invalid");
+    $("label").remove(".invalid");
+    modalDialog.scrollTop(0);
   }
 
   function closeModal(event) {
@@ -52,6 +57,28 @@ $(document).ready(function () {
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+    $("input").removeClass("invalid");
+    $("label").remove(".invalid");
   }
-
+  // Обработка форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "name must be at least 2 letters",
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone: {
+          required: "Phone is required",
+        }
+      },
+    });
+  })
+  // Маска номера телефона
+  $(".phoneInput").mask("+7 (999) 999-99-99");
 });
