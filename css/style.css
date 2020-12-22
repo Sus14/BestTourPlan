@@ -397,14 +397,13 @@ img {
 
 .invalid {
   color: #EC1F46;
-  border-bottom: 1px solid #EC1F46;
   position: inherit;
   z-index: 3;
 }
 
-label.invalid {
-  bottom: -50px;
-  left: 10px;
+.subscribe__wrapper-input label.invalid {
+  position: absolute;
+  top: 55px;
 }
 
 .navbar {
@@ -999,38 +998,44 @@ label.invalid {
   position: relative;
   width: 350px;
   height: 55px;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .subscribe__input {
   position: absolute;
-  width: 100%;
+  max-width: 285px;
   height: 100%;
   padding-left: 33px;
-  padding-right: 85px;
+  padding-right: 79px;
   border: none;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
   color: #BDBDBD;
+  -webkit-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
 }
 
 .subscribe__button {
-  position: absolute;
+  position: relative;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  right: 0;
-  top: 0;
+  padding: 0;
+  margin-right: 0;
+  margin-left: auto;
   min-width: 65px;
   height: 100%;
   background-color: #EC1F46;
   color: #ffffff;
   border: none;
+  -webkit-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
 }
 
 .reviews {
@@ -1483,19 +1488,27 @@ label.invalid {
           flex-basis: 48%;
 }
 
-.footer__input::-webkit-input-placeholder {
+.footer label.invalid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+.footer label.invalid::-webkit-input-placeholder {
   color: #757575;
 }
 
-.footer__input:-ms-input-placeholder {
+.footer label.invalid:-ms-input-placeholder {
   color: #757575;
 }
 
-.footer__input::-ms-input-placeholder {
+.footer label.invalid::-ms-input-placeholder {
   color: #757575;
 }
 
-.footer__input::placeholder {
+.footer label.invalid::placeholder {
   color: #757575;
 }
 
@@ -1664,29 +1677,37 @@ label.invalid {
 
 .modal__input {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
 }
 
-.modal__input::-webkit-input-placeholder {
+.modal label.invalid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+.modal label.invalid::-webkit-input-placeholder {
   color: #757575;
   text-overflow: ellipsis;
 }
 
-.modal__input:-ms-input-placeholder {
+.modal label.invalid:-ms-input-placeholder {
   color: #757575;
   text-overflow: ellipsis;
 }
 
-.modal__input::-ms-input-placeholder {
+.modal label.invalid::-ms-input-placeholder {
   color: #757575;
   text-overflow: ellipsis;
 }
 
-.modal__input::placeholder {
+.modal label.invalid::placeholder {
   color: #757575;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -1694,7 +1715,7 @@ label.invalid {
 
 .modal__message {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;

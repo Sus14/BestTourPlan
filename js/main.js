@@ -37,7 +37,7 @@ $(document).ready(function () {
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
   modalButton.on("click", openModal);
-  closeModalButton.on("click", closeModal)
+  closeModalButton.on("click", closeModal);
 
   function openModal() {
     var modalOverlay = $(".modal__overlay");
@@ -62,6 +62,7 @@ $(document).ready(function () {
   }
   // Обработка форм
   $(".form").each(function () {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
     $(this).validate({
       errorClass: "invalid",
       messages: {
@@ -79,6 +80,17 @@ $(document).ready(function () {
       },
     });
   })
+  $("body").on("click", function () {
+    $("input").removeClass("invalid");
+    $("label").remove(".invalid");
+    $("messages").noremove("");
+  })
   // Маска номера телефона
-  $(".phoneInput").mask("+7 (999) 999-99-99");
+  $(".phone-input").mask("+7 (999) 999-99-99");
+  jQuery(".phone-input").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+      return false;
+    }
+  });
+  AOS.init();
 });

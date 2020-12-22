@@ -41,31 +41,35 @@
   position: relative
   width: 350px
   height: 55px
-  border-radius: 4px
-  overflow: hidden
+  display: flex
+  &__wrapper-input
   &__input
     position: absolute
-    width: 100%
+    max-width: 285px
     height: 100%
     padding-left: 33px
-    padding-right: 85px
+    padding-right: 79px
     border: none
     font-style: normal
     font-weight: 300
     font-size: 14px
     line-height: 18px
     color: #BDBDBD
+    border-radius: 4px 0 0 4px
   &__button
-    position: absolute
+    position: relative
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
-    right: 0
-    top: 0
+    padding: 0
+    margin-right: 0
+    margin-left: auto
     min-width: 65px
     height: 100%
     background-color: $primary
     color: $light
     border: none
+    border-radius: 0 4px 4px 0
+
 
